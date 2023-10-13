@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Resizer and Downloader</title>
+    <style>
+      body {
+        width: 300px;
+        height: 500px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="display: flex; flex-direction: column; width: 100%; height: 400px"
+    >
+      <p id="title" style="font-size: 15px; font-weight: 900">Resize Image</p>
+      <p id="text" style="margin-top: -5%; padding-bottom: 7%">
+        Convert your image to any dimensions for free
+      </p>
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          height: 400px;
+          border-radius: 20px;
+          justify-content: center;
+          background-color: rgb(239, 237, 241);
+          flex-direction: column;
+          padding-bottom: 3%;
+          align-items: center;
+        "
+      >
+        <div
+          id="uploadBtnContainer"
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <p style="padding: 3%">Upload your image here</p>
+          <input type="file" id="upload" hidden />
+          <button
+            id="btnUpload"
+            style="
+              background: rgb(134, 76, 205);
+              border-color: white;
+              border-width: 2px;
+              border-radius: 15px;
+              width: 100px;
+              padding: 10px;
+              color: white;
+              font-weight: 600;
+              font-size: 13px;
+            "
+          >
+            Upload
+          </button>
+        </div>
+        <div
+          id="resizeImage"
+          style="
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              width: 100%;
+              height: auto;
+              justify-content: center;
+              padding-top: 5%;
+              padding-bottom: 10%;
+            "
+          >
+            <img
+              id="preview"
+              src=""
+              alt="Uploaded Image Preview"
+              style="max-width: 100%; margin-top: 10px"
+            />
+          </div>
+          <div
+            style="
+              display: flex;
+              width: 50%;
+              justify-content: space-between;
+              padding-bottom: 10%;
+            "
+          >
+            <div>
+              width:
+              <br />
+              <input
+                type="number"
+                id="width"
+                value="0"
+                style="
+                  width: 40px;
+                  height: 10px;
+                  padding: 5px;
+                  border-radius: 5px;
+                  border: 1px;
+                  margin-top: 5%;
+                "
+              />
+            </div>
+            <div>
+              height:
+              <br />
+              <input
+                type="number"
+                id="height"
+                value="0"
+                style="
+                  width: 40px;
+                  height: 10px;
+                  padding: 5px;
+                  border-radius: 5px;
+                  border: 1px;
+                  margin-top: 5%;
+                "
+              />
+            </div>
+          </div>
+
+          <button
+            id="resizeAndDownload"
+            style="
+              background: rgb(134, 76, 205);
+              border-color: white;
+              border-width: 2px;
+              border-radius: 15px;
+              width: 100px;
+              padding: 10px;
+              color: white;
+              font-weight: 600;
+              font-size: 13px;
+            "
+          >
+            Download
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
